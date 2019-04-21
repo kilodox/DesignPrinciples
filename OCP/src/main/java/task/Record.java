@@ -1,6 +1,6 @@
 package task;
 
-public abstract class Record {
+public class Record {
 
     private String id;
 
@@ -11,6 +11,4 @@ public abstract class Record {
     public void setId(String id) {
         this.id = id;
     }
-
-    public abstract String printAll();
 }

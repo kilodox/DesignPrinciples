@@ -8,9 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EmployeesReader {
-    public List<Employee> cache = null;
+    private List<Employee> cache = null;
 
-    List<Employee> readEmployees(Connection connection) {
+    public List<Employee> readEmployees(final Connection connection) {
         if (cache == null) {
             cache = new ArrayList<>();
             try (Statement statement = connection.createStatement();
@@ -35,6 +35,7 @@ public class EmployeesReader {
                 throw new IllegalStateException(e);
             }
         }
+
         return cache;
     }
 }

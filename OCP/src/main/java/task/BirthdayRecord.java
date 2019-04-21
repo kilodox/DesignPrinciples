@@ -31,9 +31,4 @@ public class BirthdayRecord extends Record {
     public void setDay(int day) {
         this.day = day;
     }
-
-    @Override
-    public String printAll() {
-        return "birthday: " + getYear() + "/" + getMonth() + "/" + getDay();
-    }
 }

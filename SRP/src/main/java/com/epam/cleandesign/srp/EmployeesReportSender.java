@@ -6,18 +6,10 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
-import java.util.List;
 import java.util.Properties;
 
 public class EmployeesReportSender {
-    private String employees;
-
-    public EmployeesReportSender(HtmlEmployees htmlEmployees) {
-        this.employees = htmlEmployees.convert();
-    }
-
-    public void sendEmployeesReport() {
-
+    public void sendEmployeesReport(String employeesHtml) {
         String to = "abcd@gmail.com";
         String from = "web@gmail.com";
         String host = "localhost";
@@ -31,8 +23,6 @@ public class EmployeesReportSender {
             message.setFrom(new InternetAddress(from));
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
             message.setSubject("Employees report");
-
-            String employeesHtml = employees;
 
             message.setContent(employeesHtml, "text/html; charset=utf-8");
 

@@ -31,9 +31,4 @@ public class VisaRecord extends Record {
     public void setTo(ZonedDateTime to) {
         this.to = to;
     }
-
-    @Override
-    public String printAll() {
-        return "visa: " + getCountry() + ", from: " + getFrom() + ", to: " + getTo();
-    }
 }

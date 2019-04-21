@@ -23,11 +23,6 @@ public class SkillsRecord extends Record {
         return this;
     }
 
-    @Override
-    public String printAll() {
-        return "skills: " + getSkill() + "=" + getLevel();
-    }
-
     public enum Level {
         EXPERT, ADVANCED, INTERMEDIATE, NOVICE
     }

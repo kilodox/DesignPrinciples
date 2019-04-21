@@ -2,15 +2,8 @@ package com.epam.cleandesign.srp;
 
 import java.util.List;
 
-public class HtmlEmployees implements EmpoyeesConverter{
-    private List<Employee> employees;
-
-    public HtmlEmployees(EmployeesReader employeesReader) {
-        this.employees = employeesReader.cache;
-    }
-
-    @Override
-    public String convert(){
+public class HtmlEmployees {
+    public synchronized String getAllEmployeesAsHtml(List<Employee> employees) {
         StringBuilder builder = new StringBuilder();
         builder.append("<table>").append("<tr><th>Employee</th><th>Position</th></tr>");
 

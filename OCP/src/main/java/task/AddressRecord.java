@@ -71,11 +71,4 @@ public class AddressRecord extends Record {
     public void setIndex(String index) {
         this.index = index;
     }
-
-    @Override
-    public String printAll() {
-        return  "address: " + getCountry() + ", " + getProvince() + ", " + getCity() + ", " +
-                getStreet() + " st., " + getBuilding() + " b., " + getApartment() + " apt., " +
-                getIndex();
-    }
 }
