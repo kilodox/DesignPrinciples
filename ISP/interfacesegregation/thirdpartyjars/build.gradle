@@ -1,3 +1,0 @@
-description = 'Third party common module'
-apply plugin: 'java'
-

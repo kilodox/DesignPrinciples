@@ -1,4 +1,0 @@
-rootProject.name = 'interfacesegregation'
-include 'sources'
-include 'test'
-include 'thirdpartyjars'

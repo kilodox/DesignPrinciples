@@ -1,7 +1,0 @@
-description = 'Testing module'
-apply plugin: 'java'
-
-dependencies {
-    compile project(':sources')
-    testCompile group: 'junit', name: 'junit', version: '4.13-beta-2'
-}
